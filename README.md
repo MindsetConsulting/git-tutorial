@@ -10,6 +10,7 @@ This tutorial provides an overview of essential Git commands and their usage for
 - [Working with Branches](#working-with-branches)
 - [Collaboration and Remotes](#collaboration-and-remotes)
 - [Advanced Git Commands](#advanced-git-commands)
+- [Team Workflows] (#team-workflows)
 
 ---
 
@@ -157,6 +158,28 @@ git tag <tag_name>
 ```bash
 git cherry-pick <commit_hash>
 ```
+## Team Workflows
+
+### 1. Feature Branch Workflow
+
+The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.
+
+...
+
+Example using Suzanne and Prashant:
+
+Suzanne begins a new feature
+Feature Branch Workflow: commit changes
+Before she starts developing a feature, Suzanne needs an isolated branch to work on. She can request a new branch with the following command:
+
+bash
+Copy code
+git checkout -b suzannes-feature main
+...
+
+Meanwhile, Prashant is doing the exact same thing
+While Suzanne and Prashant are working on suzannes-feature and discussing it in her pull request, Prashant is doing the exact same thing with his own feature branch. By isolating features into separate branches, everybody can work independently, yet developers can still have visibility into each others' changes and can collaborate as needed.
+
 
 ---
 
