@@ -77,11 +77,82 @@ git log
 ### 1. Creating a Branch
 
 **Usage:** When starting a new feature or fixing a bug, it's good practice to create a new branch to isolate the changes.
+A repository can host multiple branches, serving as a method to structure project-related tasks. Each branch can be designated for various purposes, such as implementing a new feature, experimenting with innovations, or investigating an issue—essentially, any task within the project scope.
+
+Creating a fresh branch for every task, no matter how minor, is a recommended approach. This is particularly beneficial when initiating work on a new feature. Branches are easily disposable, allowing for their removal whenever necessary.
 
 **Example:**
 ```bash
 git branch <branch_name>
 ```
+
+Certainly! Here's the revised version with "Master" replaced by "Main" and the requested asterisk and addendum:
+
+---
+
+# Git Branch Naming Convention
+
+When working on projects that may transition from a one-man team to a 20-developer team, maintaining a manageable code repository is crucial. Many Proof of Concept projects start with changes applied directly to the *Main* branch. As projects grow, establishing a proper branching strategy becomes essential.
+
+To facilitate effective code management, I've devised a branch naming convention, categorized into two groups:
+
+## Code Flow Branches
+
+These branches represent the progression of code changes from development to production.
+
+- **Development (`dev`):**
+  All new features and bug fixes should be brought to this branch. Resolve code conflicts early in this stage.
+
+- **QA/Test (`test`):**
+  Contains code ready for QA testing.
+
+- **Staging (`staging`, Optional):**
+  Contains tested features for stakeholder review before production deployment.
+
+- **Main (`main`, formerly `master` -- see addendum below):**
+  The production branch, serving as the default presented branch.
+
+Except for Hotfixes, the code should follow a one-way merge path: `development` > `test` > `staging` > `production`.
+
+## Temporary Branches
+
+These branches are disposable and serve specific purposes.
+
+- **Feature:**
+  Use this branch for new module or use case development, based on the current development branch. Examples:
+  - `feature/integrate-swagger`
+  - `feature/JIRA-1234`
+  - `feature/JIRA-1234_support-dark-theme`
+
+- **Bug Fix:**
+  If fixes are needed post-release, they should be done on the `bugfix` branch. Examples:
+  - `bugfix/more-gray-shades`
+  - `bugfix/JIRA-1444_gray-on-blur-fix`
+
+- **Hot Fix:**
+  For immediate critical fixes, create a `hotfix` branch that can be merged directly into production and later into development. Examples:
+  - `hotfix/disable-endpoint-zero-day-exploit`
+  - `hotfix/increase-scaling-threshold`
+
+- **Experimental:**
+  Use this branch to experiment with new features or ideas not part of a release or sprint. Examples:
+  - `experimental/dark-theme-support`
+
+- **Build:**
+  A branch specifically for creating specific build artifacts or conducting code coverage runs. Examples:
+  - `build/jacoco-metric`
+
+- **Release:**
+  Use this branch for tagging a specific release version. Examples:
+  - `release/myapp-1.01.123`
+
+- **Merging:**
+  Temporary branch for resolving merge conflicts or finalizing merges between different branches. Examples:
+  - `merge/dev_lombok-refactoring`
+  - `merge/combined-device-support`
+
+**A note on 'main' versus 'master' branch:**
+In the spirit of fostering a more inclusive and sensitive environment, it's inportant to note that the computer industry's use of the terms master and slave caught everyone's attention in the summer of 2020. Amid the many protests and the growing social unrest, these harmful and antiquated terms were no longer considered appropriate. The industry has since been making efforts to move away from these terms, including renaming branches from "Master" to "Main" in version control systems like Git. For more information, you can read about why GitHub renamed its master branch to main [here](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main).
 
 ### 2. Switching Branches
 
