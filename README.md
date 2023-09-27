@@ -168,16 +168,17 @@ The core idea behind the Feature Branch Workflow is that all feature development
 
 Example using Suzanne and Prashant:
 
-Suzanne begins a new feature
+# Suzanne begins a new feature
 Feature Branch Workflow: commit changes
 Before she starts developing a feature, Suzanne needs an isolated branch to work on. She can request a new branch with the following command:
 
-bash
+**Example:**
+```bash
 Copy code
 git checkout -b suzannes-feature main
-...
+```
 
-Meanwhile, Prashant is doing the exact same thing
+# Meanwhile, Prashant is doing the exact same thing
 While Suzanne and Prashant are working on suzannes-feature and discussing it in her pull request, Prashant is doing the exact same thing with his own feature branch. By isolating features into separate branches, everybody can work independently, yet developers can still have visibility into each others' changes and can collaborate as needed.
 
 
