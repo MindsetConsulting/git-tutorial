@@ -178,7 +178,7 @@ git checkout -b suzannes-feature main
 #### Meanwhile, Prashant is doing the exact same thing
 While Suzanne and Prashant are working on suzannes-feature and discussing it in her pull request, Prashant is doing the exact same thing with his own feature branch. By isolating features into separate branches, everybody can work independently, yet developers can still have visibility into each others' changes and can collaborate as needed.
 
-## Git Rebase and Merge
+## 2. Git Rebase and Merge
 
 This section provides an overview of the `git rebase` command and its comparison with the `git merge` command, along with practical applications and considerations for integrating rebasing into the Git workflow.
 
