@@ -132,6 +132,52 @@ git pull origin <branch_name>
 
 ## Advanced Git Commands
 
+### 1. Rebasing
+
+**Usage:** To integrate changes from one branch into another while maintaining a linear commit history.
+
+**Example:**
+```bash
+git rebase <branch_name>
+
+
+### 2. Tagging
+
+**Usage:** To mark specific points in history, such as release versions.
+
+**Example:**
+```bash
+git tag <tag_name>
+```
+
+### 3. Cherry-Picking
+
+**Usage:** To apply a specific commit from one branch to another.
+
+**Example:**
+```bash
+git cherry-pick <commit_hash>
+```
+## Team Workflows
+
+### 1. Feature Branch Workflow
+
+The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.
+
+
+**Example: Suzanne and Prashant each have their own feature branches**
+
+#### Suzanne begins a new feature
+Before she starts developing a feature, Suzanne needs an isolated branch to work on. She can request a new branch with the following command:
+
+**Example:**
+```bash
+git checkout -b suzannes-feature main
+```
+
+#### Meanwhile, Prashant is doing the exact same thing
+While Suzanne and Prashant are working on suzannes-feature and discussing it in her pull request, Prashant is doing the exact same thing with his own feature branch. By isolating features into separate branches, everybody can work independently, yet developers can still have visibility into each others' changes and can collaborate as needed.
+
 ## Git Rebase and Merge
 
 This section provides an overview of the `git rebase` command and its comparison with the `git merge` command, along with practical applications and considerations for integrating rebasing into the Git workflow.
@@ -208,48 +254,3 @@ Rebasing can be integrated into the Git workflow at various stages of a feature'
 
 Understanding when and how to use `git rebase` and `git merge` allows you to choose between a clean, linear history using rebase and a complete project history with merge. Both options are valid, and leveraging the benefits of `git rebase` can lead to a more streamlined Git workflow.
 
----
-
-The examples are now incorporated in line with the respective explanations to provide a visual representation of Git history in different scenarios.
-
-### 2. Tagging
-
-**Usage:** To mark specific points in history, such as release versions.
-
-**Example:**
-```bash
-git tag <tag_name>
-```
-
-### 3. Cherry-Picking
-
-**Usage:** To apply a specific commit from one branch to another.
-
-**Example:**
-```bash
-git cherry-pick <commit_hash>
-```
-## Team Workflows
-
-### 1. Feature Branch Workflow
-
-The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.
-
-
-**Example: Suzanne and Prashant each have their own feature branches**
-
-#### Suzanne begins a new feature
-Before she starts developing a feature, Suzanne needs an isolated branch to work on. She can request a new branch with the following command:
-
-**Example:**
-```bash
-git checkout -b suzannes-feature main
-```
-
-#### Meanwhile, Prashant is doing the exact same thing
-While Suzanne and Prashant are working on suzannes-feature and discussing it in her pull request, Prashant is doing the exact same thing with his own feature branch. By isolating features into separate branches, everybody can work independently, yet developers can still have visibility into each others' changes and can collaborate as needed.
-
-
----
-
-This tutorial covers basic Git commands and provides examples to help you understand when and why you would use these operations in a real-world scenario. Explore and experiment with these commands to become proficient in using Git for your projects. Happy coding!
