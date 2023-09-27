@@ -10,7 +10,7 @@ This tutorial provides an overview of essential Git commands and their usage for
 - [Working with Branches](#working-with-branches)
 - [Collaboration and Remotes](#collaboration-and-remotes)
 - [Advanced Git Commands](#advanced-git-commands)
-- [Team Workflows] (#team-workflows)
+- [Team Workflows](#team-workflows)
 
 ---
 
