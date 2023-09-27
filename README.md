@@ -132,14 +132,85 @@ git pull origin <branch_name>
 
 ## Advanced Git Commands
 
-### 1. Rebasing
+## Git Rebase and Merge
 
-**Usage:** To integrate changes from one branch into another while maintaining a linear commit history.
+This section provides an overview of the `git rebase` command and its comparison with the `git merge` command, along with practical applications and considerations for integrating rebasing into the Git workflow.
 
-**Example:**
-```bash
-git rebase <branch_name>
+### Merging vs. Rebasing
+
+The `git rebase` command can significantly simplify the development process -- but it must be used with caution. Below we'll compare `git rebase` with `git merge`, exploring when and how to use them effectively.
+
+### Conceptual Overview
+
+Git rebase and git merge are both used to integrate changes from one branch into another but operate in distinct ways. Git merge creates a "merge commit" that ties the histories of both branches, resulting in a non-destructive operation. However, it can lead to a cluttered feature branch history if main is actively updated.
+
+**The Merge Option**
+
+Merging the main branch into the feature branch using `git merge` creates a merge commit and preserves the complete history.
+
+```plaintext
+*   Merge branch 'main' into feature
+|\  
+| * Commit C3 (main)
+| * Commit C2 (main)
+| * Commit C1 (main)
+|/  
+* Commit F2 (feature)
+* Commit F1 (feature)
 ```
+
+However, it can lead to a cluttered feature branch history if main is actively updated.
+
+**The Rebase Option**
+
+Rebasing the feature branch onto the main branch using `git rebase` results in a linear project history.
+
+```plaintext
+* Commit C3 (main)
+* Commit C2 (main)
+* Commit C1 (main)
+* Commit F2 (feature)
+* Commit F1 (feature)
+```
+
+However, it can be potentially catastrophic if used incorrectly and loses the context provided by a merge commit.
+
+**Interactive Rebasing**
+
+Interactive rebasing allows altering commits during the rebase process, providing complete control over the branch's commit history.
+
+```plaintext
+* Commit C3 (main)
+* Commit C2 (main)
+* Commit C1 (main)
+* Commit F3 (feature - squashed)
+```
+
+This is useful for cleaning up a messy history before merging a feature branch into the main branch.
+
+**The Golden Rule of Rebasing**
+
+The golden rule of git rebase is to avoid using it on public branches to prevent confusing history and diverging main branches. Force-pushing should be used cautiously and preferably on private branches.
+
+### Workflow Walkthrough
+
+Rebasing can be integrated into the Git workflow at various stages of a feature's development:
+
+1. **Local Cleanup**: Periodically perform an interactive rebase to clean up in-progress features and make commits more focused and meaningful.
+
+2. **Incorporating Upstream Changes**: Incorporate upstream changes from the main branch using either `git merge` or `git rebase` to keep the feature branch up to date.
+
+3. **Reviewing a Feature with a Pull Request**: Clean up code with an interactive rebase before submitting a pull request to present a clean and easy-to-follow feature branch history.
+
+4. **Integrating an Approved Feature**: Rebase the feature onto the main branch to maintain a linear history before merging the feature into the main codebase.
+
+### Summary
+
+Understanding when and how to use `git rebase` and `git merge` allows you to choose between a clean, linear history using rebase and a complete project history with merge. Both options are valid, and leveraging the benefits of `git rebase` can lead to a more streamlined Git workflow.
+
+---
+
+The examples are now incorporated in line with the respective explanations to provide a visual representation of Git history in different scenarios.
 
 ### 2. Tagging
 
