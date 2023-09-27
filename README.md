@@ -91,7 +91,7 @@ git branch <branch_name>
 
 When working on projects that may transition from a one-man team to a 20-developer team, maintaining a manageable code repository is crucial. Many Proof of Concept projects start with changes applied directly to the *Main* branch. As projects grow, establishing a proper branching strategy becomes essential.
 
-To facilitate effective code management, I've devised a branch naming convention, categorized into two groups:
+That being said, there is no universal convention for naming branches. One approach could be to view branch types under two general categories:
 
 ### Code Flow Branches
 
