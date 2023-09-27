@@ -8,6 +8,7 @@ This tutorial provides an overview of essential Git commands and their usage for
 - [Getting Started](#getting-started)
 - [Basic Git Commands](#basic-git-commands)
 - [Working with Branches](#working-with-branches)
+-   [Git Branch Naming Convention](#git-branch-naming-convention)
 - [Collaboration and Remotes](#collaboration-and-remotes)
 - [Advanced Git Commands](#advanced-git-commands)
 - [Team Workflows](#team-workflows)
@@ -86,13 +87,13 @@ Creating a fresh branch for every task, no matter how minor, is a recommended ap
 git branch <branch_name>
 ```
 
-# Git Branch Naming Convention
+## Git Branch Naming Convention
 
 When working on projects that may transition from a one-man team to a 20-developer team, maintaining a manageable code repository is crucial. Many Proof of Concept projects start with changes applied directly to the *Main* branch. As projects grow, establishing a proper branching strategy becomes essential.
 
 To facilitate effective code management, I've devised a branch naming convention, categorized into two groups:
 
-## Code Flow Branches
+### Code Flow Branches
 
 These branches represent the progression of code changes from development to production.
 
@@ -110,7 +111,7 @@ These branches represent the progression of code changes from development to pro
 
 Except for Hotfixes, the code should follow a one-way merge path: `development` > `test` > `staging` > `production`.
 
-## Temporary Branches
+### Temporary Branches
 
 These branches are disposable and serve specific purposes.
 
