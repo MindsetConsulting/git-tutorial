@@ -324,4 +324,4 @@ Understanding when and how to use `git rebase` and `git merge` allows you to cho
 
 
 [^2]: [Credit](https://dev.to/couchcamote/git-branching-name-convention-cch)
-{^3]: [Credit](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+[^3]: [Credit](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
