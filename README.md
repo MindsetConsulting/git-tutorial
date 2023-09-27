@@ -164,9 +164,8 @@ git cherry-pick <commit_hash>
 
 The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.
 
-...
 
-Example using Suzanne and Prashant:
+**Example:**
 
 #### Suzanne begins a new feature
 Feature Branch Workflow: commit changes
