@@ -8,7 +8,7 @@ This tutorial provides an overview of essential Git commands and their usage for
 - [Getting Started](#getting-started)
 - [Basic Git Commands](#basic-git-commands)
 - [Working with Branches](#working-with-branches)
--   [Git Branch Naming Convention](#git-branch-naming-convention)
+- [Git Branch Naming Convention](#git-branch-naming-convention)
 - [Collaboration and Remotes](#collaboration-and-remotes)
 - [Advanced Git Commands](#advanced-git-commands)
 - [Team Workflows](#team-workflows)
@@ -87,7 +87,7 @@ Creating a fresh branch for every task, no matter how minor, is a recommended ap
 git branch <branch_name>
 ```
 
-## Git Branch Naming Convention
+## Git Branch Naming Convention [^2]
 
 When working on projects that may transition from a one-man team to a 20-developer team, maintaining a manageable code repository is crucial. Many Proof of Concept projects start with changes applied directly to the *Main* branch. As projects grow, establishing a proper branching strategy becomes essential.
 
@@ -147,9 +147,6 @@ These branches are disposable and serve specific purposes.
   Temporary branch for resolving merge conflicts or finalizing merges between different branches. Examples:
   - `merge/dev_lombok-refactoring`
   - `merge/combined-device-support`
-
-[^1]: A note on 'main' versus 'master' branch:
-In the spirit of fostering a more inclusive and sensitive environment, it's inportant to note that the computer industry's use of the terms master and slave caught everyone's attention in the summer of 2020. Amid the many protests and the growing social unrest, these harmful and antiquated terms were no longer considered appropriate. The industry has since been making efforts to move away from these terms, including renaming branches from "Master" to "Main" in version control systems like Git. For more information, you can read about why GitHub renamed its master branch to main [here](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main).
 
 ### 2. Switching Branches
 
@@ -228,7 +225,7 @@ git cherry-pick <commit_hash>
 ```
 ## Team Workflows
 
-### 1. Feature Branch Workflow
+### 1. Feature Branch Workflow [^3]
 
 The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.
 
@@ -322,3 +319,7 @@ Rebasing can be integrated into the Git workflow at various stages of a feature'
 
 Understanding when and how to use `git rebase` and `git merge` allows you to choose between a clean, linear history using rebase and a complete project history with merge. Both options are valid, and leveraging the benefits of `git rebase` can lead to a more streamlined Git workflow.
 
+[^1]: A note on 'main' versus 'master' branch:
+In the spirit of fostering a more inclusive and sensitive environment, it's inportant to note that the computer industry's use of the terms master and slave caught everyone's attention in the summer of 2020. Amid the many protests and the growing social unrest, these harmful and antiquated terms were no longer considered appropriate. The industry has since been making efforts to move away from these terms, including renaming branches from "Master" to "Main" in version control systems like Git. For more information, you can read about why GitHub renamed its master branch to main [here](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main).
+[^2]: [Credit](https://dev.to/couchcamote/git-branching-name-convention-cch)
+{^3][Credit](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
