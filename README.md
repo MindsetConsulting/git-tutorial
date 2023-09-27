@@ -86,10 +86,6 @@ Creating a fresh branch for every task, no matter how minor, is a recommended ap
 git branch <branch_name>
 ```
 
-Certainly! Here's the revised version with "Master" replaced by "Main" and the requested asterisk and addendum:
-
----
-
 # Git Branch Naming Convention
 
 When working on projects that may transition from a one-man team to a 20-developer team, maintaining a manageable code repository is crucial. Many Proof of Concept projects start with changes applied directly to the *Main* branch. As projects grow, establishing a proper branching strategy becomes essential.
@@ -109,7 +105,7 @@ These branches represent the progression of code changes from development to pro
 - **Staging (`staging`, Optional):**
   Contains tested features for stakeholder review before production deployment.
 
-- **Main (`main`, formerly `master` -- see addendum below):**
+- **Main (`main`, formerly `master` [^1]):**
   The production branch, serving as the default presented branch.
 
 Except for Hotfixes, the code should follow a one-way merge path: `development` > `test` > `staging` > `production`.
@@ -151,7 +147,7 @@ These branches are disposable and serve specific purposes.
   - `merge/dev_lombok-refactoring`
   - `merge/combined-device-support`
 
-**A note on 'main' versus 'master' branch:**
+[^1]: A note on 'main' versus 'master' branch:
 In the spirit of fostering a more inclusive and sensitive environment, it's inportant to note that the computer industry's use of the terms master and slave caught everyone's attention in the summer of 2020. Amid the many protests and the growing social unrest, these harmful and antiquated terms were no longer considered appropriate. The industry has since been making efforts to move away from these terms, including renaming branches from "Master" to "Main" in version control systems like Git. For more information, you can read about why GitHub renamed its master branch to main [here](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main).
 
 ### 2. Switching Branches
