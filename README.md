@@ -322,4 +322,4 @@ Understanding when and how to use `git rebase` and `git merge` allows you to cho
 [^1]: A note on 'main' versus 'master' branch:
 In the spirit of fostering a more inclusive and sensitive environment, it's inportant to note that the computer industry's use of the terms master and slave caught everyone's attention in the summer of 2020. Amid the many protests and the growing social unrest, these harmful and antiquated terms were no longer considered appropriate. The industry has since been making efforts to move away from these terms, including renaming branches from "Master" to "Main" in version control systems like Git. For more information, you can read about why GitHub renamed its master branch to main [here](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main).
 [^2]: [Credit](https://dev.to/couchcamote/git-branching-name-convention-cch)
-{^3][Credit](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+{^3]: [Credit](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
