@@ -207,6 +207,7 @@ git pull origin <branch_name>
 **Example:**
 ```bash
 git rebase <branch_name>
+```
 
 
 ### 2. Tagging
