@@ -13,7 +13,7 @@ This tutorial provides an overview of essential Git commands and their usage for
 - [Advanced Git Commands](#advanced-git-commands)
 - [Rebasing](#1-rebasing)
 - [Tagging](#2-tagging)
-- [Cherrypicking](#3-cherrypicking)
+- [Cherrypicking](#3-cherry-picking)
 - [Team Workflows](#team-workflows)
 
 ---
@@ -203,7 +203,8 @@ git pull origin <branch_name>
 
 ## Advanced Git Commands
 
-### 1. Rebasing (also see [Merging vs. Rebasing](#merging-vs-rebasing))
+### 1. Rebasing 
+(also see [Merging vs. Rebasing](#merging-vs-rebasing))
 
 **Usage:**  Git rebasing is a technique used to integrate changes from one branch into another while modifying the commit history into a linear structure. Here's a summarized explanation:
 
