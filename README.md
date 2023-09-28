@@ -202,7 +202,7 @@ git pull origin <branch_name>
 
 ## Advanced Git Commands
 
-### 1. Rebasing
+### 1. Rebasing (also see [Merging vs. Rebasing](#merging-vs-rebasing))
 
 **Usage:**  Git rebasing is a technique used to integrate changes from one branch into another while modifying the commit history into a linear structure. Here's a summarized explanation:
 
@@ -315,16 +315,14 @@ The core idea behind the Feature Branch Workflow is that all feature development
 
 **Example: Suzanne and Prashant each have their own feature branches**
 
-#### Suzanne begins a new feature
-Before she starts developing a feature, Suzanne needs an isolated branch to work on. She can request a new branch with the following command:
+Suzanne begins a new feature. Before she starts developing a feature, Suzanne needs an isolated branch to work on. She can request a new branch with the following command:
 
 **Example:**
 ```bash
 git checkout -b suzannes-feature main
 ```
 
-#### Meanwhile, Prashant is doing the exact same thing
-While Suzanne and Prashant are working on suzannes-feature and discussing it in her pull request, Prashant is doing the exact same thing with his own feature branch. By isolating features into separate branches, everybody can work independently, yet developers can still have visibility into each others' changes and can collaborate as needed.
+Meanwhile, Prashant is doing the exact same thing. While Suzanne and Prashant are working on suzannes-feature and discussing it in her pull request, Prashant is doing the exact same thing with his own feature branch. By isolating features into separate branches, everybody can work independently, yet developers can still have visibility into each others' changes and can collaborate as needed.
 
 ## 2. Git Rebase and Merge
 
