@@ -87,13 +87,13 @@ Creating a fresh branch for every task, no matter how minor, is a recommended ap
 git branch <branch_name>
 ```
 
-## Git Branch Naming Convention [^2]
+### Git Branch Naming Convention [^2]
 
 When working on projects that may transition from a one-man team to a 20-developer team, maintaining a manageable code repository is crucial. Many Proof of Concept projects start with changes applied directly to the *Main* branch. As projects grow, establishing a proper branching strategy becomes essential.
 
 That being said, there is no universal convention for naming branches. One approach could be to view branch types under two general categories:
 
-### Code Flow Branches
+#### 1. Code Flow Branches
 
 These branches represent the progression of code changes from development to production.
 
@@ -114,7 +114,7 @@ In the spirit of fostering a more inclusive and sensitive environment, it's inpo
 
 Except for Hotfixes, the code should follow a one-way merge path: `development` > `test` > `staging` > `production`.
 
-### Temporary Branches
+#### 2. Temporary Branches
 
 These branches are disposable and serve specific purposes.
 
