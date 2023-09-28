@@ -11,8 +11,9 @@ This tutorial provides an overview of essential Git commands and their usage for
 - [Git Branch Naming Convention](#git-branch-naming-convention)
 - [Collaboration and Remotes](#collaboration-and-remotes)
 - [Advanced Git Commands](#advanced-git-commands)
-- [Rebasing](#rebasing)
-- [Cherrypicking](#cherrypicking)
+- [Rebasing](#1-rebasing)
+- [Tagging](#2-tagging)
+- [Cherrypicking](#3-cherrypicking)
 - [Team Workflows](#team-workflows)
 
 ---
