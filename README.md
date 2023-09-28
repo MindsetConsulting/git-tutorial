@@ -202,7 +202,26 @@ git pull origin <branch_name>
 
 ### 1. Rebasing
 
-**Usage:** To integrate changes from one branch into another while maintaining a linear commit history.
+**Usage:**  Git rebasing is a technique used to integrate changes from one branch into another while modifying the commit history into a linear structure. Here's a summarized explanation:
+
+- **Objective:**
+  - *Rebasing* aims to incorporate changes from one branch (usually a feature branch) onto another (often the main branch), ensuring a linear, cleaner commit history.
+
+- **Process:**
+  - Commits from the feature branch are replayed on top of the target branch, starting from a common ancestor. This creates a new, modified commit history.
+
+- **Advantages:**
+  - *Cleaner History:* Rebasing helps maintain a linear commit history by incorporating feature changes seamlessly into the main branch.
+  - *Easier to Understand:* The commit history becomes more readable and chronological, making it easier to follow the development flow.
+
+- **Considerations:**
+  - *Conflicts:* Conflicts may arise during the reapplication of commits. These need to be resolved manually.
+  - *Use Cases:* Rebasing is particularly useful for feature branches, aligning them with the latest changes in the main branch before merging.
+  
+- **Usage:**
+  - To rebase, use the command `git rebase <target-branch>`. This moves the current branch to the latest commit of the target branch and replays the changes.
+
+In essence, rebasing facilitates a cleaner, more linear commit history by incorporating changes from one branch into another, resulting in a more readable and organized project history.
 
 **Example:**
 ```bash
